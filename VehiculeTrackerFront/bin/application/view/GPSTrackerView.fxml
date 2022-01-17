@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.GPSTrackerViewController">
+   <children>
+      <Pane layoutX="44.0" layoutY="47.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFF3E4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="37.0" layoutY="154.0" prefHeight="282.0" prefWidth="262.0" style="-fx-background-color: #F6D7A7;">
+               <children>
+                  <Label layoutX="23.0" layoutY="80.0" prefHeight="17.0" prefWidth="70.0" text="SimNumber" />
+                  <Label layoutX="23.0" layoutY="138.0" prefHeight="17.0" prefWidth="41.0" text="mie" />
+                  <TextField fx:id="tfSimT" layoutX="99.0" layoutY="76.0" promptText="exp: 12543X1-T@" />
+                  <TextField fx:id="tfMieT" layoutX="99.0" layoutY="134.0" promptText="exp: 12543X1-T@" />
+                  <Separator layoutX="90.0" layoutY="68.0" orientation="VERTICAL" prefHeight="106.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="122.0" text="Form GPSTracker" />
+                  <TextField fx:id="tfIdT" layoutX="99.0" layoutY="31.0" visible="false" />
+                  <Button layoutX="18.0" layoutY="189.0" mnemonicParsing="false" onAction="#onAddTracker" style="-fx-background-color: #1597E5;" text="ADD" />
+                  <Button layoutX="147.0" layoutY="208.0" mnemonicParsing="false" onAction="#onUpdateTracker" style="-fx-background-color: #77D970;" text="UpDate" />
+                  <Button layoutX="13.0" layoutY="233.0" mnemonicParsing="false" onAction="#onDeleteTracker" style="-fx-background-color: #FF5C58;" text="Delete" />
+               </children>
+            </Pane>
+            <Separator layoutY="61.0" prefHeight="7.0" prefWidth="653.0" style="-fx-background-color: black;" />
+            <TableView fx:id="tableTracker" layoutX="314.0" layoutY="154.0" prefHeight="282.0" prefWidth="323.0" style="-fx-background-color: #FCFFA6;">
+              <columns>
+                <TableColumn fx:id="colIdT" prefWidth="90.0" text="#ID" />
+                <TableColumn fx:id="colIdSim" prefWidth="124.0" text="SimNumber" />
+                  <TableColumn fx:id="colIme" prefWidth="106.0" text="Ime" />
+              </columns>
+            </TableView>
+            <Label layoutX="23.0" layoutY="22.0" prefHeight="17.0" prefWidth="130.0" text="GPSTracker Page" />
+            <Label layoutX="314.0" layoutY="124.0" prefHeight="17.0" prefWidth="130.0" text="Liste GPSTracker" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.VehiculeViewController">
+   <children>
+      <Pane layoutY="-3.0" prefHeight="150.0" prefWidth="645.0" style="-fx-background-color: #FBFBFB;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="tableVehicule" layoutX="50.0" layoutY="92.0" prefHeight="200.0" prefWidth="514.0" style="-fx-background-color: #F3F0D7;">
+              <columns>
+                <TableColumn fx:id="colIdV" prefWidth="75.0" style="-fx-background-color: #F3F0D7;" text="#ID" />
+                <TableColumn fx:id="colMatV" prefWidth="100.0" text="Matricule" />
+                  <TableColumn fx:id="colMarV" prefWidth="100.0" text="Marque" />
+                  <TableColumn fx:id="colTypV" prefWidth="100.0" text="Type" />
+                  <TableColumn prefWidth="100.0" text="Tracker" />
+              </columns>
+            </TableView>
+            <Pane layoutX="21.0" layoutY="299.0" prefHeight="182.0" prefWidth="605.0" style="-fx-background-color: #FEF5ED;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="177.0" text="Form for add Vehicule" />
+                  <Label layoutX="14.0" layoutY="60.0" text="Matricule" />
+                  <Label layoutX="16.0" layoutY="99.0" text="Marque" />
+                  <Label layoutX="289.0" layoutY="70.0" text="Type" />
+                  <TextField fx:id="tfMatriculeV" layoutX="89.0" layoutY="57.0" promptText="exp: 2543-A-23" />
+                  <TextField fx:id="tfMarqueV" layoutX="91.0" layoutY="96.0" promptText="exp: Audi" />
+                  <TextField fx:id="tfTypeV" layoutX="387.0" layoutY="66.0" promptText="exp: Moto ou voiture" visible="false" />
+                  <TextField fx:id="tfIdV" layoutX="389.0" layoutY="105.0" visible="false" />
+                  <Button layoutX="165.0" layoutY="131.0" mnemonicParsing="false" onAction="#onAddVehicule" style="-fx-background-color: #99FEFF;" text="ADD">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="289.0" layoutY="131.0" mnemonicParsing="false" onAction="#onUpDateVehicule" style="-fx-background-color: #9AE66E;" text="UpDate" />
+                  <Button layoutX="421.0" layoutY="131.0" mnemonicParsing="false" onAction="#onDeleteVehicule" style="-fx-background-color: #FF6D6D;" text="Delete" />
+                  <ChoiceBox fx:id="choxTy" layoutX="388.0" layoutY="65.0" prefWidth="150.0" />
+               </children>
+            </Pane>
+            <Separator layoutY="51.0" prefHeight="6.0" prefWidth="645.0" style="-fx-background-color: #1F1D36;" />
+            <Label layoutX="36.0" layoutY="67.0" prefHeight="18.0" prefWidth="97.0" text="Liste Vehicules" />
+         </children>
+      </Pane>
+      <Pane prefHeight="51.0" prefWidth="645.0" style="-fx-background-color: #EED6C4;">
+         <children>
+            <Label layoutX="31.0" layoutY="17.0" prefHeight="20.0" prefWidth="187.0" text="Vehicule Composant">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="16.0" />
+               </font></Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
